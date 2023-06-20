@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="icon" href="./assets/logo.png" type="image/x-icon">
+        <title>Fashion Shop</title>
+    <!--------- Meta and Link for Fashion Shop  ------------>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./Css File/style.css">
+    <link rel="stylesheet" href="./Css File/notification.css">
+    <link rel="stylesheet" href="./Css File/logo.css">
+    <link rel="stylesheet" href="./Css File/carousel.css">
+    <link rel="stylesheet" href="./Css File/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+<body>
+    <div class="main" style="background-color: maroon;">
+    
+<!----------------------------------------  Fashion Main  ------------------------------------------------------------>
+        <div class="fashion-main" >
+            <h1 class="product-category">
+              <img src="./assets/logo.png" alt="logo" class="logo-img">
+              Welcome to our <span class="ShopName">Aika's</span> Fashion Find Shop!
+            </h1>
+            <button class="myBtn" id="myBtn">View Cart <i class="fas fa-cart-plus"></i></button>
+        </div>
+        <hr />        
+<!----------------------------------------- THE MODAL FASHION -------------------------------------------------------------------->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div id="myModalContent" class="modal-content">
+        <span class="close">&times;</span>
+        <h3 class="modalTitle"><span class="submodalTitle">FASHION FIND </span> SHOPPING CART</h3>
+        <hr />
+        <table class="cart">
+            <tr>
+            <th>Image</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Quantity Price</th>
+            </tr>
+            <tbody id="myTable">
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3">Total Quantity:</td>
+                <td id="totalQuantity"></td>
+            </tr>
+            <tr>
+                <td colspan="3">Total Price:</td>
+                <td id="totalPrice"></td>
+            </tr>
+            <tr>
+                <td colspan="3">Payment:</td>
+                <td>
+                <input type="number" id="payment-input" placeholder="Payment" min="0">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Change:</td>
+                <td id="change" class="total-change"></td>
+            </tr>
+            </tfoot>
+        </table>
+        <hr />
+        <p> <span class="NoteCSS">Note:</span> To know the <b>Total Price</b> , you should click the ( <i class="fas fa-sort-up"></i> <i class="fas fa-sort-down"></i> ) </p>
+        <button id="proceedButton">Proceed</button>
+        <h4 id="message">Thank you!</h4>
+        </div>
+    </div>
+  
+<!----------------------------------------  CAROUSEL MAIN ---------------------------------------------------------------------------->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+        <img src="./assets/Pic1.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+        <img src="./assets/Pic2.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+        <img src="./assets/Pic4.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./assets/Pic3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./assets/Pic5.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./assets/Pic6.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="./assets/Pic7.png" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>  
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span> 
+      <span class="dot" onclick="currentSlide(7)"></span> 
+    </div>
+<!----------------------------------------  Fashion Notification ------------------------------------------------------------------------------->
+    <div id="notification" class="notification">Item added to cart!</div>
+
+<!----------------------------------------  Fashion Container  ------------------------------------------------------------------------------->
+            <div id="fashion-container"></div>
+<!----------------------------------------  Fashion Footer ------------------------------------------------------>
+    <footer class="footer">
+        <h4> <span class="subfooter">@ Aika's Fashion Find</span> . </h4> 
+        <h5>For more info:  <a
+            href="https://www.google.com/maps/@13.882971,120.9088409,3a,75y,23.4h,76.7t/data=!3m6!1e1!3m4!1sX9gZ-XWho1CPuqCWwBReBg!2e0!7i16384!8i8192?entry=ttu">Location</a> <a href="./contact.html">Contact</a> <a href="./about.html">About Us</a></h5>
+    </footer>
+    <hr />
+    </div>
+    <script src="index.js" charset="utf-8"> </script>
+    <script src="product.js" charset="utf-8"> </script>
+</body>
+</html>
